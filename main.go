@@ -32,5 +32,8 @@ func GetFullName(firstName string, lastName string) string {
 	if firstName == "" && lastName == "" {
 		return ""
 	}
+	if firstName == lastName {
+		return firstName
+	}
 	return fmt.Sprintf("%s %s", firstName, lastName)
 }
